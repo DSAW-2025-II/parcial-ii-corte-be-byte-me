@@ -15,6 +15,10 @@ app.use(cors({
 
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("Backend desplegado correctamente en Render ");
+});
+
 // Middleware de auth
 function authMiddleware(req, res, next) {
   const authHeader = req.headers["authorization"];
